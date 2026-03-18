@@ -1,2 +1,68 @@
-# pond-model
-Empirical test of the Dark Matter as Substrate (Pond Model) junction angle prediction against SDSS cosmic web data
+# Pond Model — Junction Angle Empirical Test
+
+**Cosmic Web Junction Angle Predicts Node Richness:
+A Test of the Substrate Confluence Prediction**
+
+Vela Anarchos — Independent Researcher — March 2026
+
+---
+
+## What this is
+
+This repository contains the full analysis pipeline for the empirical
+test reported in Anarchos (2026). The Dark Matter as Substrate (Pond
+Model) predicts that galaxy cluster mass scales with the severity of
+the junction angle between arriving cosmic web filaments:
+
+**M_cluster ∝ sin(θ_junction)**
+
+We test this against the Tempel et al. (2014) SDSS filament catalogue.
+
+## Key Result
+
+| Test | Pearson r | 95% CI | p-value |
+|------|-----------|--------|---------|
+| Primary (4,025 nodes) | 0.752 | [0.719, 0.781] | ≪ 10⁻³⁰⁰ |
+| Richness per filament | 0.529 | [0.500, 0.557] | 1.5 × 10⁻²⁸⁹ |
+
+Correlation persists within every fixed N_fil bin (N=2 through N=7)
+and across linking lengths of 3.0, 5.0, and 7.0 Mpc/h.
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `PondTest_COMBINED_v3.py` | Full analysis pipeline |
+| `PondTest_v2_Summary.txt` | Verified numerical results |
+
+## Data
+
+Data: Tempel et al. (2014) SDSS filament catalogue
+CDS VizieR: J/MNRAS/438/3465
+https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/438/3465
+
+Place downloaded files in a `tempel2014/` subfolder.
+
+## How to Run
+```bash
+pip install numpy scipy matplotlib
+python PondTest_COMBINED_v3.py
+```
+
+## Requirements
+
+- Python 3
+- NumPy, SciPy, Matplotlib
+
+## Citation
+
+Anarchos, V. (2026). Cosmic Web Junction Angle Predicts Node Richness:
+A Test of the Substrate Confluence Prediction. arXiv preprint.
+
+## License
+
+Text and code: Creative Commons Attribution 4.0 (CC BY 4.0)
+You are free to use, share, and adapt with attribution.
+
+SHA-256 provenance hash:
+76ba2a3646ae5b21f4cb70c3477dfa4e7e17a5fa866cb48f7ff56726c31d7a
