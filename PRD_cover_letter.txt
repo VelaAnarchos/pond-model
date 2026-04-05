@@ -1,0 +1,54 @@
+Dear Editors of Physical Review D,
+
+I am submitting the enclosed manuscript, "Glueball Mass Ratios from
+Three Perpendicular Directions: A Geometric Derivation with Zero Free
+Parameters," for consideration as a Regular Article.
+
+The paper reports a new result: the six lightest glueball mass ratios
+in pure SU(3) Yang-Mills theory can be derived from the resonant mode
+structure of three mutually perpendicular directions, using mode
+indices drawn from {1, sqrt(2), 2} -- the edge, face diagonal, and
+double edge of a unit cube. The derivation uses zero free parameters
+and achieves a mean error of 1.0% against lattice QCD values.
+
+The critical ratio m(2++)/m(0++) = sqrt(2) matches the lattice value
+of 1.398 to within 1.2%. This ratio is the face diagonal of the cube
+-- a purely geometric quantity requiring no knowledge of QCD.
+
+The SU(3) gauge symmetry is derived (not assumed) from the
+perpendicular geometry: U(3)/U(1) = SU(3). Independent empirical
+support is provided from cosmic web data, where three-filament nodes
+with mutually perpendicular geometry accumulate significantly more
+mass (r = 0.397, p = 8.0 x 10^-37, N = 942).
+
+The paper is directly relevant to Physical Review D as it addresses
+the glueball spectrum -- a topic with an extensive publication history
+in this journal, including the foundational lattice calculations of
+Morningstar and Peardon (PRD 60, 034509) and Chen et al. (PRD 73,
+014516) against which the predictions are compared.
+
+SUGGESTED REFEREES:
+
+1. Andreas Athenodorou (University of Cyprus)
+   - Co-author of the most recent high-precision glueball spectrum
+     calculation (JHEP 2021, 172)
+
+2. Michael Teper (University of Oxford)
+   - Leading expert on glueball spectroscopy from lattice QCD
+
+3. Colin Morningstar (Carnegie Mellon University)
+   - Author of the foundational glueball spectrum paper (PRD 1999)
+
+4. Biagio Lucini (Swansea University)
+   - Expert on large-N gauge theories and glueball physics
+
+The manuscript has not been submitted elsewhere and is not under
+consideration at any other journal. The analysis pipeline is publicly
+available at https://github.com/VelaAnarchos/pond-model.
+
+Thank you for your consideration.
+
+Respectfully,
+Vela Anarchos (Ryan J. Odam)
+Independent Researcher
+ryano098@protonmail.com
