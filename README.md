@@ -7,7 +7,22 @@ Vela Anarchos — Independent Researcher — March 2026
 
 ---
 
-## What this is# The Pond Model & Holographic Cube Lattice (HCL)
+## What this is# The Pond Model & Holographic Cube Lattice (HCL)# Intellectual Property & Usage License
+**Project: The Pond Model & Holographic Cube Lattice (HCL)**
+**Author: Vela Anarchos (Ryan J. Odam)**
+
+## 1. Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+The manuscripts, theoretical derivations, and code in this repository are licensed under CC BY-SA 4.0. 
+* **Attribution:** You must give appropriate credit to Vela Anarchos and provide a link to this repository.
+* **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+## 2. Commercial Rights & Patent Non-Waiver
+While this work is open for academic and independent research, the author reserves all rights regarding proprietary commercial applications, industrial hardware implementations of the "Quadrangle Architecture," or private patenting of the geometric resonance models described herein. 
+
+## 3. Contact for Commercial Licensing
+For inquiries regarding commercial use, private implementation, or licensing that falls outside the scope of CC BY-SA 4.0, please contact:
+**Email:** ryano098@protonmail.com
+**Provenance Hash:** 76ba2a3646ae5b21f4cb70c3477dfa4e7e17a5fa866cb48f7ff56726c31d7a
 **Author:** Vela Anarchos (Ryan J. Odam)
 
 This repository contains the theoretical derivations, empirical data analysis, and formal manuscripts for the **Pond Model of Cosmology**.
