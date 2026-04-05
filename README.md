@@ -7,7 +7,21 @@ Vela Anarchos — Independent Researcher — March 2026
 
 ---
 
-## What this is
+## What this is# The Pond Model & Holographic Cube Lattice (HCL)
+**Author:** Vela Anarchos (Ryan J. Odam)
+
+This repository contains the theoretical derivations, empirical data analysis, and formal manuscripts for the **Pond Model of Cosmology**.
+
+## 📄 Formal Manuscripts
+* **Glueball Mass Ratios from Three Perpendicular Directions (2026)** - *Submitted to Physical Review D.* [PDF](./GlueballSpectrum_CubeGeometry_Paper.pdf) | [LaTeX](./glueball_spectrum_PRD.tex)
+* **Cosmic Web Junction Angle Predicts Node Richness (2026)** - *viXra:17906383.* [PDF](./Anarchos2026_JunctionAngle_v8_FINAL.pdf)
+
+## 🧪 Evidence & Code
+* `PondTest_COMBINED_v3.py`: Python pipeline used to analyze 942 SDSS cosmic web nodes. 
+* **Key Result:** Found that mutual orthogonality in filament junctions predicts mass accumulation with $p = 8.0 \times 10^{-37}$.
+
+## ⚖️ License
+This work is dedicated to the public domain under **CC0 1.0**. It is released freely to prevent the proprietary patenting of vacuum geometry and to ensure open access to frontier physics.
 
 This repository contains the full analysis pipeline for the empirical
 test reported in Anarchos (2026). The Dark Matter as Substrate (Pond
