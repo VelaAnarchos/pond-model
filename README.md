@@ -1,97 +1,113 @@
-# Pond Model — Junction Angle Empirical Test
+# The Pond Model & Holographic Cube Lattice (HCL)
 
-**Cosmic Web Junction Angle Predicts Node Richness:
-A Test of the Substrate Confluence Prediction**
-
-Vela Anarchos — Independent Researcher — March 2026
+**Author:** Ryan J. Odam (Vela Anarchos)  
+**Contact:** ryano098@protonmail.com  
+**License:** CC BY-SA 4.0 (see LICENSE)
 
 ---
 
-## What this is# The Pond Model & Holographic Cube Lattice (HCL)# Intellectual Property & Usage License
-**Project: The Pond Model & Holographic Cube Lattice (HCL)**
-**Author: Vela Anarchos (Ryan J. Odam)**
+## What This Is
 
-## 1. Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-The manuscripts, theoretical derivations, and code in this repository are licensed under CC BY-SA 4.0. 
-* **Attribution:** You must give appropriate credit to Vela Anarchos and provide a link to this repository.
-* **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+This repository contains the empirical analysis code and formal manuscripts for two interconnected theoretical frameworks:
 
-## 2. Commercial Rights & Patent Non-Waiver
-While this work is open for academic and independent research, the author reserves all rights regarding proprietary commercial applications, industrial hardware implementations of the "Quadrangle Architecture," or private patenting of the geometric resonance models described herein. 
+**The Pond Model** treats dark matter as a viscous superfluid substrate through which cosmic web filaments flow. The key testable prediction is that galaxy cluster mass scales with junction angle severity: **M_cluster is proportional to sin(theta_junction)**.
 
-## 3. Contact for Commercial Licensing
-For inquiries regarding commercial use, private implementation, or licensing that falls outside the scope of CC BY-SA 4.0, please contact:
-**Email:** ryano098@protonmail.com
-**Provenance Hash:** 76ba2a3646ae5b21f4cb70c3477dfa4e7e17a5fa866cb48f7ff56726c31d7a
-**Author:** Vela Anarchos (Ryan J. Odam)
+**The Holographic Cube Lattice (HCL)** derives cosmological constants from pure cube geometry. The perpendicularity test in this repo is the empirical bridge between the two frameworks.
 
-This repository contains the theoretical derivations, empirical data analysis, and formal manuscripts for the **Pond Model of Cosmology**.
+---
 
-## 📄 Formal Manuscripts
-* **Glueball Mass Ratios from Three Perpendicular Directions (2026)** - *Submitted to Physical Review D.* [PDF](./GlueballSpectrum_CubeGeometry_Paper.pdf) | [LaTeX](./glueball_spectrum_PRD.tex)
-* **Cosmic Web Junction Angle Predicts Node Richness (2026)** - *viXra:17906383.* [PDF](./Anarchos2026_JunctionAngle_v8_FINAL.pdf)
+## Manuscripts
 
-## 🧪 Evidence & Code
-* `PondTest_COMBINED_v3.py`: Python pipeline used to analyze 942 SDSS cosmic web nodes. 
-* **Key Result:** Found that mutual orthogonality in filament junctions predicts mass accumulation with $p = 8.0 \times 10^{-37}$.
+- **Glueball Mass Ratios from Three Perpendicular Directions (2026)** — Submitted to Physical Review D (DR13900). [PDF](./GlueballSpectrum_CubeGeometry_Paper.pdf) | [LaTeX](./glueball_spectrum_PRD.tex)
+- **Cosmic Web Junction Angle Predicts Node Richness (2026)** — viXra:17906383. [PDF](./Anarchos2026_JunctionAngle_v8_FINAL.pdf)
+- **SU(3) Uniqueness from Minimum Energy (2026)** — [PDF](./Odam2026A_SU3Uniqueness.pdf)
 
-## ⚖️ License
-This work is dedicated to the public domain under **CC0 1.0**. It is released freely to prevent the proprietary patenting of vacuum geometry and to ensure open access to frontier physics.
+---
 
-This repository contains the full analysis pipeline for the empirical
-test reported in Anarchos (2026). The Dark Matter as Substrate (Pond
-Model) predicts that galaxy cluster mass scales with the severity of
-the junction angle between arriving cosmic web filaments:
+## Code — Analysis Pipeline
 
-**M_cluster ∝ sin(θ_junction)**
+Each script is a self-contained, independently runnable analysis. Every working iteration is preserved with a unique versioned filename for scientific reproducibility.
 
-We test this against the Tempel et al. (2014) SDSS filament catalogue.
+| Script | What It Does |
+|--------|-------------|
+| `PondTest_JunctionAngle_v3_2026mar.py` | Primary pipeline: junction angle correlation, N_fil control, richness-per-filament test, 6-panel plot |
+| `PondTest_Bootstrap_v1_2026mar.py` | 95% bootstrap CIs for all correlations, linking-length robustness (3.0, 5.0, 7.0 Mpc/h) |
+| `PondTest_Perpendicularity_v1_2026apr.py` | Cube ground state test: 4 perpendicularity tests on N_fil=3 nodes |
 
-## Key Result
+### Key Results (Verified)
 
-| Test | Pearson r | 95% CI | p-value |
-|------|-----------|--------|---------|
-| Primary (4,025 nodes) | 0.752 | [0.719, 0.781] | ≪ 10⁻³⁰⁰ |
-| Richness per filament | 0.529 | [0.500, 0.557] | 1.5 × 10⁻²⁸⁹ |
+| Test | Pearson r | 95% CI | p-value | N |
+|------|-----------|--------|---------|---|
+| Primary junction angle (5.0 Mpc/h) | 0.752 | [0.719, 0.781] | below 10^-300 | 4,025 |
+| Richness per filament | 0.529 | [0.500, 0.557] | 1.5 x 10^-289 | 4,025 |
+| Perpendicularity (N_fil=3) | 0.494 | — | 3.3 x 10^-59 | 942 |
 
-Correlation persists within every fixed N_fil bin (N=2 through N=7)
-and across linking lengths of 3.0, 5.0, and 7.0 Mpc/h.
+Correlation persists within every fixed N_fil bin (N=2 through N=7) and across linking lengths of 3.0, 5.0, and 7.0 Mpc/h.
 
-## Files
+---
 
-| File | Description |
-|------|-------------|
-| `PondTest_COMBINED_v3.py` | Full analysis pipeline |
-| `PondTest_v2_Summary.txt` | Verified numerical results |
+## How to Run
+
+### Step 1: Install Python dependencies
+
+```
+pip install numpy scipy matplotlib
+```
+
+### Step 2: Download the data
+
+Download table1.dat and table2.dat from Tempel et al. (2014):  
+https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/438/3465
+
+### Step 3: Set up your folder
+
+```
+pond-model/
+    PondTest_JunctionAngle_v3_2026mar.py
+    PondTest_Bootstrap_v1_2026mar.py
+    PondTest_Perpendicularity_v1_2026apr.py
+    tempel2014/
+        table1.dat
+        table2.dat
+    manuscripts/
+        (PDF files)
+    README.md
+    LICENSE
+```
+
+### Step 4: Run
+
+```
+cd pond-model
+python PondTest_JunctionAngle_v3_2026mar.py
+python PondTest_Bootstrap_v1_2026mar.py
+python PondTest_Perpendicularity_v1_2026apr.py
+```
+
+Each script prints results to the terminal and saves output files (plots and reports) to the same directory.
+
+---
 
 ## Data
 
-Data: Tempel et al. (2014) SDSS filament catalogue
-CDS VizieR: J/MNRAS/438/3465
+Tempel, E., Stoica, R. S., Martinez, V. J., et al. 2014, MNRAS, 438, 3465  
+CDS VizieR: J/MNRAS/438/3465  
 https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/438/3465
 
-Place downloaded files in a `tempel2014/` subfolder.
-
-## How to Run
-```bash
-pip install numpy scipy matplotlib
-python PondTest_COMBINED_v3.py
-```
-
-## Requirements
-
-- Python 3
-- NumPy, SciPy, Matplotlib
+---
 
 ## Citation
 
-Anarchos, V. (2026). Cosmic Web Junction Angle Predicts Node Richness:
-A Test of the Substrate Confluence Prediction. arXiv preprint.
+Odam, R. J. (Vela Anarchos). (2026). Cosmic Web Junction Angle Predicts Node Richness: A Test of the Substrate Confluence Prediction.
+
+---
 
 ## License
 
-Text and code: Creative Commons Attribution 4.0 (CC BY 4.0)
-You are free to use, share, and adapt with attribution.
+Text, derivations, and code: **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
 
-SHA-256 provenance hash:
-76ba2a3646ae5b21f4cb70c3477dfa4e7e17a5fa866cb48f7ff56726c31d7a
+You must give appropriate credit to Ryan J. Odam (Vela Anarchos) and provide a link to this repository. If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
+
+The author reserves all rights regarding proprietary commercial applications or private patenting of the geometric resonance models described herein. For commercial licensing inquiries, contact ryano098@protonmail.com.
+
+**SHA-256 provenance hash:** 76ba2a3646ae5b21f4cb70c3477dfa4e7e17a5fa866cb48f7ff56726c31d7a
